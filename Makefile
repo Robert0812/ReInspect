@@ -36,5 +36,5 @@ clean:
 	rm -f utils/stitch_wrapper.so
 
 utils/stitch_wrapper.so:
-	cd utils && makecython++ stitch_wrapper.pyx "" "stitch_rects.cpp ./hungarian/hungarian.cpp"
+	cd utils && makecython++ stitch_wrapper.pyx "" "stitch_rects.cpp ./hungarian/hungarian.cpp -I $(HOME)/anaconda2/include/python2.7"
 
